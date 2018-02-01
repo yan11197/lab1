@@ -99,7 +99,7 @@ appropriate OCaml expression to assign the value to the variable
 exercise1 below.
 ......................................................................*)
 
-let exercise3 () = failwith "exercise3 not implemented" ;;
+let exercise3 () = - (5 - 3) ;;
 
 (* Hint: The OCaml concrete expression
 
@@ -113,6 +113,14 @@ correspond to. Check it with a member of the course staff if you'd
 like.
 ......................................................................*)
 
+      -
+      ^
+     / \
+    /   \
+   ~     3
+   |
+   |
+   5     
    
 (*======================================================================
 Part 2: Types and type inference
@@ -124,21 +132,21 @@ expressions below? Test your solution by uncommenting the examples
 error is generated.
 ......................................................................*)
 
-(*   <--- remove this start of comment line
+(   <--- remove this start of comment line
 
-let exercise5a : ??? = 42 ;;
+let exercise5a : int = 42 ;;
 
-let exercise5b : ??? =
+let exercise5b : string =
   let greet y = "Hello " ^ y
   in greet "World!";;
 
-let exercise5c : ???  =
+let exercise5c : int  =
   fun (x, y) -> x + int_of_float y ;;
 
-let exercise5d : ??? =
+let exercise5d : bool =
   fun x -> x < x + 1 ;;
 
-let exercise5e : ??? =
+let exercise5e : list =
   fun x -> if x then [x] else [] ;;
 
 remove this end of comment line too ----> *)
