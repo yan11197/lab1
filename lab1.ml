@@ -132,8 +132,6 @@ expressions below? Test your solution by uncommenting the examples
 error is generated.
 ......................................................................*)
 
-(   <--- remove this start of comment line
-
 let exercise5a : int = 42 ;;
 
 let exercise5b : string =
@@ -148,8 +146,6 @@ let exercise5d : bool =
 
 let exercise5e : list =
   fun x -> if x then [x] else [] ;;
-
-remove this end of comment line too ----> *)
 
 (*======================================================================
 Part 3: First-order functional programming
@@ -178,8 +174,10 @@ to the list containing the elements 3, 4, and 5? You'll want to
 replace the "[]" with the correct functional call.
 ......................................................................*)
 
-let square_all (lst : int list) : int list =
-  failwith "square_all not implemented" ;;
+let rec square_all (lst : int list) : int list =
+  match lst with
+  | [] -> []
+  | head :: tail -> (head * head) :: square_all tail ;;
 
 let exercise6 = [] ;;
 
